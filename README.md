@@ -2,7 +2,7 @@ OpenStack Heat Templates
 ========================
 
 This archive contains templates for use with OpenStack [Heat][heat]. Some of
-the templates are used by the [Hands-on-labs][handsonlabs] I wrote to learn
+the templates are used by the [Hands-on-labs][handsonlabs]. I wrote to learn
 more about OpenStack and the functionality it offers.
 
 
@@ -19,5 +19,5 @@ License
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
-[heat](https://wiki.openstack.org/wiki/Heat)
-[handsonlabs](https://github.com/gbraad/openstack-handsonlabs/)
+[heat]: https://wiki.openstack.org/wiki/Heat
+[handsonlabs]: https://github.com/gbraad/openstack-handsonlabs/
