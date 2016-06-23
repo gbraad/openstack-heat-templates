@@ -48,27 +48,9 @@ resources:
             # Root password
             sudo echo root:%root_password% | chpasswd
             
-            dnf remove -y vim-minimal
-            dnf install -y \
-                sudo \
-                git \
-                ansible \
-                python-pip \
-                python2-dnf \
-                htop
-
-            # Add personal user
-            adduser gbraad
-            echo "gbraad ALL=(root) NOPASSWD:ALL" | tee -a /etc/sudoers.d/gbraad
-            chmod 0440 /etc/sudoers.d/gbraad
-
-            # Install personal dotfiles
-            curl -sSL https://raw.githubusercontent.com/gbraad/dotfiles/master/install.yml -o /tmp/install.yml
-            su - gbraad -c "ansible-playbook /tmp/install.yml"
-
-            # Clean up
-            dnf clean all
-                
+            # Installation script
+            curl -sSL https://raw.githubusercontent.com/gbraad/devenv/master/install.sh -o /tmp/install.sh
+            bash /tmp/install.sh
           params:
             "%root_password%": { get_param: root_password }
 
